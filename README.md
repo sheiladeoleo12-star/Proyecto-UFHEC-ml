@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/34723852/README.md)
 # 📅 Asistente inteligente de cronogramas
 
 **Predicción de retrasos en tareas de proyectos mediante Machine Learning**

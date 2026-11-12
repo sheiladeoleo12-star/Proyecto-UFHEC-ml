@@ -1,0 +1,7 @@
+# Dependencias adicionales para ejecutar el notebook
+-r requirements.txt
+matplotlib==3.11.2
+seaborn==0.13.2
+shap==0.54.1
+scipy==1.18.1
+jupyter

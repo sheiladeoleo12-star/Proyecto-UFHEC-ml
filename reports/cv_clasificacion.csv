@@ -1,0 +1,6 @@
+,ROC-AUC,ROC-AUC,PR-AUC,PR-AUC,F1@0.5,F1@0.5
+,mean,std,mean,std,mean,std
+modelo,,,,,,
+Random Forest,0.902,0.02,0.752,0.04,0.649,0.039
+Regresión logística,0.852,0.028,0.585,0.026,0.546,0.011
+XGBoost,0.903,0.026,0.757,0.041,0.661,0.037

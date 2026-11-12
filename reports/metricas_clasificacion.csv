@@ -1,0 +1,5 @@
+modelo,umbral,ROC-AUC,PR-AUC,Exactitud,Precisión,Recall,F1,Brier
+Línea base (siempre la clase mayoritaria),0.5,0.5,0.2,0.8,0.0,0.0,0.0,0.16
+Regresión logística,0.5,0.906,0.735,0.879,0.701,0.692,0.696,0.094
+Random Forest,0.5,0.952,0.858,0.913,0.799,0.756,0.777,0.067
+XGBoost,0.61,0.951,0.859,0.913,0.837,0.698,0.761,0.066

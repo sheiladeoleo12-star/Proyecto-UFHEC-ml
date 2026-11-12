@@ -1,0 +1,194 @@
+{
+  "modelo_clasificacion": "XGBoost",
+  "modelo_regresion": "Random Forest",
+  "umbral": 0.6135,
+  "sigma_log": 1.4987,
+  "pct_atrasos_mediana": 9.0,
+  "columnas": [
+    "prioridad",
+    "dias_hasta_fecha_limite",
+    "dias_desde_creacion",
+    "carga_responsable",
+    "pct_atrasos_responsable",
+    "predecesoras",
+    "tareas_que_bloquea",
+    "tareas_relacionadas",
+    "reaperturas",
+    "comentarios",
+    "cambios_prioridad",
+    "cambios_alcance",
+    "entregas_asociadas",
+    "replanificaciones",
+    "dias_definicion",
+    "tipo_Bug",
+    "tipo_Mejora",
+    "tipo_Tarea",
+    "tipo_Subtarea",
+    "tipo_Nueva funcionalidad",
+    "tipo_Prueba",
+    "tipo_Historia de usuario",
+    "tipo_Documentación",
+    "tipo_Otro"
+  ],
+  "n_tareas": 64747,
+  "n_entrenamiento": 51797,
+  "n_prueba": 12950,
+  "pct_atrasadas": 21.4,
+  "metricas_clasificacion": {
+    "umbral": 0.61,
+    "ROC-AUC": 0.951,
+    "PR-AUC": 0.859,
+    "Exactitud": 0.913,
+    "Precisión": 0.837,
+    "Recall": 0.698,
+    "F1": 0.761,
+    "Brier": 0.066
+  },
+  "metricas_regresion": {
+    "MAE": 30.003,
+    "MedAE": 14.606,
+    "RMSE": 51.571,
+    "R² (log)": 0.074,
+    "Spearman": 0.397
+  },
+  "baseline_regresion_medae": 22.0,
+  "importancia": [
+    {
+      "variable": "% atrasos responsable",
+      "SHAP medio |abs|": 0.8903999924659729
+    },
+    {
+      "variable": "Dias hasta fecha limite",
+      "SHAP medio |abs|": 0.7401000261306763
+    },
+    {
+      "variable": "Replanificaciones",
+      "SHAP medio |abs|": 0.7024999856948853
+    },
+    {
+      "variable": "Comentarios",
+      "SHAP medio |abs|": 0.5044999718666077
+    },
+    {
+      "variable": "Dias definicion",
+      "SHAP medio |abs|": 0.35519999265670776
+    },
+    {
+      "variable": "Reaperturas",
+      "SHAP medio |abs|": 0.3352000117301941
+    },
+    {
+      "variable": "Carga responsable",
+      "SHAP medio |abs|": 0.29010000824928284
+    },
+    {
+      "variable": "Tareas relacionadas",
+      "SHAP medio |abs|": 0.16990000009536743
+    },
+    {
+      "variable": "Entregas asociadas",
+      "SHAP medio |abs|": 0.11760000139474869
+    },
+    {
+      "variable": "Prioridad",
+      "SHAP medio |abs|": 0.10790000110864639
+    }
+  ],
+  "cv_clasificacion": {
+    "Random Forest": {
+      "ROC-AUC": 0.902,
+      "PR-AUC": 0.752,
+      "F1@0.5": 0.649
+    },
+    "Regresión logística": {
+      "ROC-AUC": 0.852,
+      "PR-AUC": 0.585,
+      "F1@0.5": 0.546
+    },
+    "XGBoost": {
+      "ROC-AUC": 0.903,
+      "PR-AUC": 0.757,
+      "F1@0.5": 0.661
+    }
+  },
+  "test_clasificacion": [
+    {
+      "modelo": "Línea base (siempre la clase mayoritaria)",
+      "umbral": 0.5,
+      "ROC-AUC": 0.5,
+      "PR-AUC": 0.2,
+      "Exactitud": 0.8,
+      "Precisión": 0.0,
+      "Recall": 0.0,
+      "F1": 0.0,
+      "Brier": 0.16
+    },
+    {
+      "modelo": "Regresión logística",
+      "umbral": 0.5,
+      "ROC-AUC": 0.906,
+      "PR-AUC": 0.735,
+      "Exactitud": 0.879,
+      "Precisión": 0.701,
+      "Recall": 0.692,
+      "F1": 0.696,
+      "Brier": 0.094
+    },
+    {
+      "modelo": "Random Forest",
+      "umbral": 0.5,
+      "ROC-AUC": 0.952,
+      "PR-AUC": 0.858,
+      "Exactitud": 0.913,
+      "Precisión": 0.799,
+      "Recall": 0.756,
+      "F1": 0.777,
+      "Brier": 0.067
+    },
+    {
+      "modelo": "XGBoost",
+      "umbral": 0.61,
+      "ROC-AUC": 0.951,
+      "PR-AUC": 0.859,
+      "Exactitud": 0.913,
+      "Precisión": 0.837,
+      "Recall": 0.698,
+      "F1": 0.761,
+      "Brier": 0.066
+    }
+  ],
+  "test_regresion": [
+    {
+      "modelo": "Línea base (mediana)",
+      "MAE": 32.133,
+      "MedAE": 22.0,
+      "RMSE": 51.484,
+      "R² (log)": 0.0,
+      "Spearman": 0.0
+    },
+    {
+      "modelo": "Ridge",
+      "MAE": 30.083,
+      "MedAE": 17.271,
+      "RMSE": 50.904,
+      "R² (log)": 0.033,
+      "Spearman": 0.268
+    },
+    {
+      "modelo": "Random Forest",
+      "MAE": 30.003,
+      "MedAE": 14.606,
+      "RMSE": 51.571,
+      "R² (log)": 0.074,
+      "Spearman": 0.397
+    },
+    {
+      "modelo": "XGBoost",
+      "MAE": 28.016,
+      "MedAE": 14.206,
+      "RMSE": 49.817,
+      "R² (log)": 0.134,
+      "Spearman": 0.448
+    }
+  ]
+}
